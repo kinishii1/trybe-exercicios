@@ -1,8 +1,0 @@
-internet
-unix
-bash
-html
-css
-js
-react
-sql
