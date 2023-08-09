@@ -9,7 +9,7 @@
     <img alt="Made by Kin Ishii" src="https://img.shields.io/badge/made_by-Kin_Ishii-blue">
 
 
-##### Fundamentos: 
+# Fundamentos: 
 - [x] dia-01-unix-e-shell
 - [x] dia-02-git-o-que-é-e-para-que-serve
 - [x] dia-03-git-e-github-entendendo-comandos
