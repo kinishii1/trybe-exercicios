@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício</title>
+    <style>
+      section {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+
+      const h1Element = document.createElement('h1')
+      h1Element.innerText = 'TrybeTrip - Agência de Viagens'
+      document.body.appendChild(h1Element)
+
+      const mainElement = document.createElement('main')
+      mainElement.className ='main-content'
+      document.body.appendChild(mainElement)
+
+      const sectionElement = document.createElement('section')
+      sectionElement.className = 'center-content'
+      mainElement.appendChild(sectionElement)
+
+      const elementP = document.createElement('p')
+      elementP.innerText = 'Oi'
+      mainElement.appendChild(elementP)
+
+      const leftContent = document.createElement('section')
+      leftContent.className = 'left-content'
+      mainElement.appendChild(leftContent)
+
+      const rightContent = document.createElement('section')
+      rightContent.className = 'right-content'
+      mainElement.appendChild(rightContent)
+
+      const imageElement = document.createElement('img')
+      imageElement.src = 'https://picsum.photos/200'
+      imageElement.className = 'small-image'
+      leftContent.appendChild(imageElement)
+
+      const olElement = document.createElement('ul')
+      const numbers = [
+    'Um', 'Dois', 'Três', 'Quatro', 'Cinco',
+    'Seis', 'Sete', 'Oito', 'Nove', 'Dez']
+
+      for (number in numbers){
+        const liElement = document.createElement('li')
+        liElement.innerText = numbers[number]
+        olElement.appendChild(liElement)
+      }
+
+      rightContent.appendChild(olElement)
+
+      for (let i = 0; i < 3; i += 1){
+        h3Element = document.createElement('h3')
+        mainElement.appendChild(h3Element)
+      }
+
+      h1Element.className = 'title'
+      h3Element.className = 'description'
+      removeBrother = sectionElement.nextElementSibling.nextElementSibling
+      removeBrother.remove()
+
+      rightContent.style.margin = 'margin-right: auto'
+      sectionElement.style.backgroundColor = 'green'
+
+      liItems = olElement.querySelectorAll('li')
+      lastItem = liItems[liItems.length - 1]
+      lastLastItem = liItems[liItems.length - 2]
+
+      olElement.removeChild(lastItem)
+      olElement.removeChild(lastLastItem)
+    </script>
+  </body>
+</html>
